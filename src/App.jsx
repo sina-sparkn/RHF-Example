@@ -55,20 +55,6 @@ function App() {
           <button type="submit">Submit</button>
         </form>
       </div>
-
-      <form
-        Submit={handleSubmit((data) => {
-          console.log(data);
-        })}
-      >
-        <input
-          {...register("FirstName", {
-            validate: (value) => FirstNameRegex.test(value),
-          })}
-        />
-        {/* //render input Errors */}
-        {errors.FirstName && <p>Enter a valid First name!</p>}
-      </form>
     </>
   );
 }
